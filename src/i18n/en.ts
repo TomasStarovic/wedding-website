@@ -5,7 +5,6 @@ export const en = {
     venue:        'Venue',
     schedule:     'Schedule',
     seating:      'Seating',
-    faq:          'FAQ',
     rsvp:         'RSVP',
   },
 
@@ -47,8 +46,8 @@ export const en = {
   // Gift / money section
   gift: {
     title:        'Gift',
-    message:      'Your presence is the greatest gift of all. If you wish to contribute, we are saving for our adventures ahead — a honeymoon fund link is below.',
-    fundLabel:    'Honeymoon Fund',
+    message:      'Your presence at our celebration truly means everything to us. We should mention — we are not settling down anytime soon. Emma\'s academic path will take us across different countries for the coming years, so practical gifts for a home aren\'t something we can easily carry with us. If you\'d still like to give something, a contribution towards our travels and adventures together would be deeply appreciated.',
+    fundLabel:    'Contribute to Our Adventures',
     fundUrl:      '#', // TODO: add link
   },
 

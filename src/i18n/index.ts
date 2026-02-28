@@ -7,7 +7,7 @@ export const languages = {
 } as const;
 
 export type Locale = keyof typeof languages;
-export const defaultLocale: Locale = 'en';
+export const defaultLocale: Locale = 'sk';
 
 const translations = { en, sk };
 
@@ -30,7 +30,7 @@ export function switchLocale(pathname: string, targetLocale: Locale): string {
   } else {
     segments.unshift(targetLocale);
   }
-  // Default locale (en) has no prefix – others do
+  // Default locale (sk) has no prefix – others do
   if (targetLocale === defaultLocale) {
     segments.shift();
   }

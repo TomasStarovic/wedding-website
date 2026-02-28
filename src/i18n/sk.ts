@@ -7,7 +7,6 @@ export const sk: Translation = {
     venue:        'Miesto',
     schedule:     'Program',
     seating:      'Zasadací plán',
-    faq:          'Otázky',
     rsvp:         'RSVP',
   },
 
@@ -49,8 +48,8 @@ export const sk: Translation = {
   // Gift / money section
   gift: {
     title:        'Dar',
-    message:      'Vaša prítomnosť je pre nás tým najkrajším darom. Ak nám chcete prispieť, sporíme na naše spoločné dobrodružstvá — odkaz na fond nižšie.',
-    fundLabel:    'Fond na svadobnú cestu',
+    message:      'Vaša prítomnosť na našej svadbe je pre nás to najdôležitejšie. Musíme však povedať — v najbližších rokoch sa usadiť neplánujeme. Emmina akademická dráha nás zavedie do rôznych krajín, takže praktické dary do domácnosti by sme so sebou len ťažko vozili. Ak nám napriek tomu chcete niečo venovať, príspevok na naše spoločné cestovanie a dobrodružstvá by sme si veľmi vážili.',
+    fundLabel:    'Prispieť na naše cestovanie',
     fundUrl:      '#', // TODO: add link
   },
 

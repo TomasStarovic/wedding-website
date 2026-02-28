@@ -5,22 +5,20 @@ import Venue from '@/components/Venue.astro';
 import Schedule from '@/components/Schedule.astro';
 import Seating from '@/components/Seating.astro';
 import Gift from '@/components/Gift.astro';
-import Faq from '@/components/Faq.astro';
 import Rsvp from '@/components/Rsvp.astro';
 import { t, type Locale } from '@/i18n/index';
 import '@/styles/global.css';
 
-const locale: Locale = 'sk';
+const locale: Locale = 'en';
 const translations = t(locale);
 ---
 
-<Layout title="Tomáš & Emma – Svadba 2026" locale={locale}>
+<Layout title="Tomáš & Emma – Wedding 2026" locale={locale}>
   <!-- Nav links slot -->
   <Fragment slot="nav-links">
     <li><a href="#venue"    class="hover:text-gold transition">{translations.nav.venue}</a></li>
     <li><a href="#schedule" class="hover:text-gold transition">{translations.nav.schedule}</a></li>
     <li><a href="#seating"  class="hover:text-gold transition">{translations.nav.seating}</a></li>
-    <li><a href="#faq"      class="hover:text-gold transition">{translations.nav.faq}</a></li>
     <li><a href="#rsvp"     class="hover:text-gold transition">{translations.nav.rsvp}</a></li>
   </Fragment>
 
@@ -29,7 +27,6 @@ const translations = t(locale);
   <Schedule t={translations} />
   <Seating t={translations} />
   <Gift t={translations} />
-  <Faq t={translations} />
   <Rsvp t={translations} />
 
   <!-- Footer slot -->
