@@ -1,0 +1,33 @@
+---
+import type { Translation } from '@/i18n/en';
+
+interface Props {
+  t: Translation;
+}
+const { t } = Astro.props;
+
+// TODO: replace with your real seating chart image path in /public/images/
+const seatingImageSrc = '/images/seating-chart.jpg';
+const hasImage = false; // set to true once you add the image
+---
+
+<section id="seating" class="py-20 px-4 max-w-5xl mx-auto">
+  <h2 class="section-title">{t.seating.title}</h2>
+  <p class="text-center text-charcoal/60 mt-2 text-sm">{t.seating.description}</p>
+
+  <div class="mt-10">
+    {hasImage ? (
+      <a href={seatingImageSrc} target="_blank" rel="noopener noreferrer" class="block group">
+        <img
+          src={seatingImageSrc}
+          alt={t.seating.imageAlt}
+          class="w-full rounded-2xl shadow-md border border-blush/30 object-contain group-hover:scale-[1.01] transition-transform duration-300"
+        />
+      </a>
+    ) : (
+      <div class="flex items-center justify-center h-64 rounded-2xl border-2 border-dashed border-blush/50 bg-blush/10 text-charcoal/40 font-sans text-sm">
+        {t.seating.placeholder}
+      </div>
+    )}
+  </div>
+</section>

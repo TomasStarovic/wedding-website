@@ -1,0 +1,61 @@
+---
+import type { Translation } from '@/i18n/en';
+
+interface Props {
+  t: Translation;
+}
+const { t } = Astro.props;
+
+// Countdown – calculate days remaining from today
+const weddingDate = new Date('2026-07-25T14:00:00');
+const today = new Date();
+const diffMs = weddingDate.getTime() - today.getTime();
+const daysLeft = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+---
+
+<section
+  id="home"
+  class="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-4 py-20 overflow-hidden"
+>
+  <!-- Soft background decoration -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-blush/20 via-ivory to-ivory" />
+  <div
+    class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-blush/20 blur-3xl -z-10"
+  />
+  <div
+    class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-sage/20 blur-3xl -z-10"
+  />
+
+  <!-- Cartoonish couple placeholder -->
+  <div class="mb-6 w-40 h-40 mx-auto rounded-full bg-blush/30 border-4 border-gold/40 flex items-center justify-center text-5xl select-none">
+    💍
+  </div>
+
+  <p class="font-sans text-sm tracking-[0.3em] uppercase text-gold mb-2">
+    {t.hero.subtitle}
+  </p>
+
+  <h1 class="font-serif text-5xl md:text-7xl text-charcoal leading-tight mb-4">
+    Tomáš <span class="text-gold">&amp;</span> Emma
+  </h1>
+
+  <p class="font-serif italic text-2xl text-charcoal/60 mb-8">
+    {t.hero.date} &nbsp;·&nbsp; {t.hero.location}
+  </p>
+
+  {daysLeft > 0 && (
+    <div class="inline-flex flex-col items-center bg-white/60 backdrop-blur px-8 py-4 rounded-2xl shadow-sm border border-blush/30">
+      <span class="font-serif text-5xl text-gold font-semibold">{daysLeft}</span>
+      <span class="font-sans text-xs tracking-widest uppercase text-charcoal/50 mt-1">{t.hero.countdown}</span>
+    </div>
+  )}
+
+  <div class="mt-10">
+    <a
+      href="#rsvp"
+      class="inline-block bg-gold text-white font-sans text-sm tracking-widest uppercase px-8 py-3 rounded-full shadow hover:bg-gold/80 transition"
+    >
+      {t.rsvp.buttonLabel}
+    </a>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+---
+import { languages, type Locale, switchLocale } from '@/i18n/index';
+
+interface Props {
+  title: string;
+  locale: Locale;
+}
+
+const { title, locale } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+<!doctype html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>{title}</title>
+    <meta name="description" content="Wedding website – Tomáš & Emma, July 25 2026" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-ivory text-charcoal font-sans antialiased">
+
+    <!-- Sticky navigation -->
+    <header class="sticky top-0 z-50 bg-ivory/90 backdrop-blur border-b border-blush/30">
+      <nav class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+        <a href={locale === 'en' ? '/' : '/sk'} class="font-serif text-xl text-gold tracking-wide">
+          T &amp; E
+        </a>
+
+        <!-- Language switcher -->
+        <div class="flex items-center gap-4">
+          <ul class="hidden md:flex gap-6 text-sm font-sans text-charcoal/70">
+            <slot name="nav-links" />
+          </ul>
+          <div class="flex gap-2 text-xs font-sans">
+            {Object.entries(languages).map(([lang, label]) => (
+              <a
+                href={switchLocale(currentPath, lang as Locale)}
+                class:list={[
+                  'px-2 py-1 rounded border transition',
+                  locale === lang
+                    ? 'border-gold text-gold font-bold'
+                    : 'border-charcoal/20 text-charcoal/50 hover:border-gold hover:text-gold',
+                ]}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="mt-16 py-8 text-center text-xs text-charcoal/40 font-sans border-t border-blush/30">
+      <slot name="footer" />
+    </footer>
+
+  </body>
+</html>

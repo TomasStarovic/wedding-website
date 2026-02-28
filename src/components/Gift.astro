@@ -1,0 +1,27 @@
+---
+import type { Translation } from '@/i18n/en';
+
+interface Props {
+  t: Translation;
+}
+const { t } = Astro.props;
+---
+
+<section id="gift" class="py-20 px-4 bg-blush/10">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="section-title">{t.gift.title}</h2>
+    <p class="mt-6 text-charcoal/70 leading-relaxed">
+      {t.gift.message}
+    </p>
+    {t.gift.fundUrl !== '#' && (
+      <a
+        href={t.gift.fundUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block mt-8 bg-gold text-white font-sans text-sm tracking-widest uppercase px-8 py-3 rounded-full shadow hover:bg-gold/80 transition"
+      >
+        {t.gift.fundLabel}
+      </a>
+    )}
+  </div>
+</section>

@@ -1,0 +1,6 @@
+# public/images
+
+Place your assets here:
+
+- `seating-chart.jpg` — your seating layout graphic (once ready, set `hasImage = true` in `Seating.astro`)
+- Couple photo or cartoon illustration if you decide to add one

@@ -1,0 +1,46 @@
+---
+import type { Translation } from '@/i18n/en';
+
+interface Props {
+  t: Translation;
+}
+const { t } = Astro.props;
+const mapsEmbedUrl =
+  'https://maps.google.com/maps?q=Račianska+22%2FA+Bratislava&output=embed';
+const mapsLink =
+  'https://maps.google.com/?q=Kulturama,+Račianska+22/A,+Bratislava';
+---
+
+<section id="venue" class="py-20 px-4 max-w-5xl mx-auto">
+  <h2 class="section-title">{t.venue.title}</h2>
+
+  <div class="mt-10 grid md:grid-cols-2 gap-10 items-start">
+    <!-- Map embed -->
+    <div class="rounded-2xl overflow-hidden shadow-md border border-blush/30 aspect-video">
+      <iframe
+        src={mapsEmbedUrl}
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Venue map"
+      />
+    </div>
+
+    <!-- Info -->
+    <div class="space-y-4">
+      <p class="font-serif text-xl text-charcoal">{t.venue.address}</p>
+      <p class="text-charcoal/60 text-sm">{t.venue.parking}</p>
+      <a
+        href={mapsLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block mt-4 border border-gold text-gold font-sans text-sm tracking-widest uppercase px-6 py-2 rounded-full hover:bg-gold hover:text-white transition"
+      >
+        {t.venue.directions}
+      </a>
+    </div>
+  </div>
+</section>

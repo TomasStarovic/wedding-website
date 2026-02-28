@@ -1,0 +1,30 @@
+---
+import type { Translation } from '@/i18n/en';
+
+interface Props {
+  t: Translation;
+}
+const { t } = Astro.props;
+---
+
+<section id="schedule" class="py-20 px-4 bg-sage/10">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="section-title">{t.schedule.title}</h2>
+
+    <ol class="mt-12 relative border-l border-gold/30 text-left space-y-10 ml-4">
+      {t.schedule.events.map((event) => (
+        <li class="ml-8">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 rounded-full bg-gold/20 border border-gold/50">
+            <span class="w-2 h-2 rounded-full bg-gold block" />
+          </span>
+          <p class="font-sans text-xs tracking-widest uppercase text-gold mb-1">
+            {event.time}
+          </p>
+          <p class="font-serif text-2xl text-charcoal">
+            {event.label}
+          </p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
