@@ -15,7 +15,6 @@ export const sk: Translation = {
     subtitle:     'Berieme sa!',
     date:         '25. júla 2026',
     location:     'Kulturama, Bratislava',
-    countdown:    'dní zostáva',
   },
 
   // Venue section
@@ -48,11 +47,8 @@ export const sk: Translation = {
   // Gift / money section
   gift: {
     title:        'Dar',
-    message:      'Vaša prítomnosť na našej svadbe je pre nás to najdôležitejšie. Musíme však povedať — v najbližších rokoch sa usadiť neplánujeme. Emmina akademická dráha nás zavedie do rôznych krajín, takže praktické dary do domácnosti by sme so sebou len ťažko vozili. Ak nám napriek tomu chcete niečo venovať, príspevok na naše spoločné cestovanie a dobrodružstvá by sme si veľmi vážili.',
-    fundLabel:    'Prispieť na naše cestovanie',
-    fundUrl:      '#', // TODO: add link
+    message:      'Vaša prítomnosť na našej svadbe je pre nás tým najväčším darom. Keďže nás Emmina akademická cesta v najbližších rokoch zavedie do rôznych kútov sveta, našu domácnosť budeme baliť do kufrov pomerne často. Ak by ste nás chceli obdarovať, najvďačnejší budeme za finančný príspevok. ',
   },
-
 
   // Contact / footer
   contact: {

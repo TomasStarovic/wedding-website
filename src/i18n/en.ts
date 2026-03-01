@@ -13,7 +13,6 @@ export const en = {
     subtitle:     'We\'re getting married!',
     date:         'July 25, 2026',
     location:     'Kulturama, Bratislava',
-    countdown:    'days to go',
   },
 
   // Venue section
@@ -46,9 +45,7 @@ export const en = {
   // Gift / money section
   gift: {
     title:        'Gift',
-    message:      'Your presence at our celebration truly means everything to us. We should mention — we are not settling down anytime soon. Emma\'s academic path will take us across different countries for the coming years, so practical gifts for a home aren\'t something we can easily carry with us. If you\'d still like to give something, a contribution towards our travels and adventures together would be deeply appreciated.',
-    fundLabel:    'Contribute to Our Adventures',
-    fundUrl:      '#', // TODO: add link
+    message:      'Your presence at our wedding means the most to us. As Emma’s academic path will lead us to several different countries over the coming years, we won’t be able to carry traditional household gifts with us. If you wish to give us a gift, a contribution towards our future travels and adventures would be appreciated the most.',  
   },
 
   // Contact / footer
