@@ -21,27 +21,49 @@ export const sk: Translation = {
   venue: {
     title:        'Miesto',
     address:      'Kulturama — Račianska 22/A, Bratislava',
-    directions:   'Získať trasu',
-    parking:      'Bezplatné parkovanie na mieste.',
+    directions:   'Navigovať na miesto',
+    parkingTitle: 'Parkovanie',
+    parkingNote:  'Priamo pri Kulturame parkovanie nie je. V okolí sú dve platené parkoviská:',
+    parkingLots: [
+      {
+        name:     'Filiálka',
+        detail:   '1 € / h \xa0· \xa0max 7 € / deň \xa0· \xa0~5 min pešo',
+        navigate: 'https://maps.google.com/?q=Parkovisko+Filiálka,+Šancová,+Bratislava',
+        embed:    'https://maps.google.com/maps?q=Parkovisko+Filiálka,+Šancová,+Bratislava&output=embed',
+
+      },
+      {
+        name:     'URBAN Residences',
+        detail:   '2 € / h \xa0· \xa0max 24 € / deň \xa0· \xa0~1 min pešo',
+        navigate: 'https://maps.google.com/?q=URBAN+Residence+parking,+Račianska,+Bratislava',
+        embed:    'https://maps.google.com/maps?q=Račianska+78+Bratislava&output=embed',
+      },
+    ],
+    navigateLabel: 'Navigovať',
   },
 
   // Schedule section
   schedule: {
     title:        'Program',
     events: [
-      { time: '14:00', label: 'Obrad' },
-      { time: '15:30', label: 'Nápoje a občerstvenie' },
-      { time: '18:00', label: 'Večera' },
-      { time: '20:00', label: 'Tanec' },
+      { time: '16:00', label: 'Obrad' },
+      { time: '17:00', label: 'Večera' },
+      { time: '18:00', label: 'Tanec novomanželov' },
+      { time: '19:00', label: 'Kahoot kvíz' },
+      { time: '20:00', label: 'Krájanie torty' },
+      { time: '21:00', label: 'Topánkový kvíz' },
+      { time: '22:00', label: 'Redový tanec' },
+      { time: '23:00', label: 'Teplý bufet' },
+      { time: '00:00', label: 'Voľný program' },
     ],
   },
 
   // Seating section
   seating: {
     title:        'Zasadací plán',
-    description:  'Nájdi svoje miesto nižšie. Kliknutím zväčšíš.',
+    description:  'Svoje miesto môžte nájsť v zasadacom pláne nižšie.',
     imageAlt:     'Zasadací plán',
-    placeholder:  'Zasadací plán bude k dispozícii bližšie k dátumu.',
+    placeholder:  'Zasadací plán bude čoskoro k dispozícii.',
   },
 
   // Gift / money section

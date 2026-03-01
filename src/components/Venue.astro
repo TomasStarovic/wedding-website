@@ -6,7 +6,7 @@ interface Props {
 }
 const { t } = Astro.props;
 const mapsEmbedUrl =
-  'https://maps.google.com/maps?q=Račianska+22%2FA+Bratislava&output=embed';
+  'https://maps.google.com/maps?q=Kulturama,+Ra%C4%8Dianska+22%2FA,+Bratislava&output=embed';
 const mapsLink =
   'https://maps.google.com/?q=Kulturama,+Račianska+22/A,+Bratislava';
 ---
@@ -14,8 +14,8 @@ const mapsLink =
 <section id="venue" class="py-20 px-4 max-w-5xl mx-auto">
   <h2 class="section-title">{t.venue.title}</h2>
 
+  <!-- Venue map + address -->
   <div class="mt-10 grid md:grid-cols-2 gap-10 items-start">
-    <!-- Map embed -->
     <div class="rounded-2xl overflow-hidden shadow-md border border-blush/30 aspect-video">
       <iframe
         src={mapsEmbedUrl}
@@ -29,18 +29,55 @@ const mapsLink =
       />
     </div>
 
-    <!-- Info -->
-    <div class="space-y-4">
-      <p class="font-serif text-xl text-charcoal">{t.venue.address}</p>
-      <p class="text-charcoal/60 text-sm">{t.venue.parking}</p>
+    <div class="space-y-4 flex flex-col justify-center">
+      <p class="font-serif text-2xl text-charcoal">{t.venue.address}</p>
       <a
         href={mapsLink}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-block mt-4 border border-gold text-gold font-sans text-sm tracking-widest uppercase px-6 py-2 rounded-full hover:bg-gold hover:text-white transition"
+        class="inline-block self-start border border-gold text-gold font-sans text-sm tracking-widest uppercase px-6 py-2 rounded-full hover:bg-gold hover:text-white transition"
       >
         {t.venue.directions}
       </a>
+    </div>
+  </div>
+
+  <!-- Parking -->
+  <div class="mt-16">
+    <h3 class="font-serif text-3xl text-charcoal text-center mb-2">{t.venue.parkingTitle}</h3>
+    <p class="text-center text-charcoal/60 text-sm mb-8">{t.venue.parkingNote}</p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      {t.venue.parkingLots.map((lot) => (
+        <div class="rounded-2xl overflow-hidden border border-blush/30 shadow-sm">
+          <!-- Map embed -->
+          <div class="aspect-video">
+            <iframe
+              src={lot.embed}
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title={lot.name}
+            />
+          </div>
+          <!-- Card info -->
+          <div class="p-5 bg-white space-y-2">
+            <p class="font-serif text-xl text-charcoal">{lot.name}</p>
+            <p class="text-charcoal/60 text-sm">{lot.detail}</p>
+            <a
+              href={lot.navigate}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block mt-2 border border-sage text-sage font-sans text-xs tracking-widest uppercase px-5 py-2 rounded-full hover:bg-sage hover:text-white transition"
+            >
+              {t.venue.navigateLabel}
+            </a>
+          </div>
+        </div>
+      ))}
     </div>
   </div>
 </section>
