@@ -14,7 +14,8 @@ export const sk: Translation = {
   hero: {
     subtitle:     'Berieme sa!',
     date:         '25. júla 2026',
-    location:     'Kulturama, Bratislava',
+    timeAndPlace: 'Kulturama - 16:00',
+    location:     'Bratislava',
   },
 
   // Venue section

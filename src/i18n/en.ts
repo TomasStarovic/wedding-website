@@ -12,7 +12,8 @@ export const en = {
   hero: {
     subtitle:     'We\'re getting married!',
     date:         'July 25, 2026',
-    location:     'Kulturama, Bratislava',
+    timeAndPlace: 'Kulturama - 16:00',
+    location:     'Bratislava',
   },
 
   // Venue section
