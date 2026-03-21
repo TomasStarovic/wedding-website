@@ -77,7 +77,7 @@ export const sk: Translation = {
   contact: {
     title:        'Máte otázky?',
     message:      'Neváhajte nás priamo kontaktovať.',
-    footer:       '© 2026 Tomáš & Emma',
+    footer:       '© 2026 Emma & Tomáš',
   },
 
   // RSVP

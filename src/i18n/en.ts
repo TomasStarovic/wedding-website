@@ -75,7 +75,7 @@ export const en = {
   contact: {
     title:        'Questions?',
     message:      'Feel free to reach out to us directly.',
-    footer:       '© 2026 Tomáš & Emma',
+    footer:       '© 2026 Emma & Tomáš',
   },
 
   // RSVP
