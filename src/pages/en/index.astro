@@ -11,21 +11,24 @@ import '@/styles/global.css';
 
 const locale: Locale = 'en';
 const translations = t(locale);
+const previewMode = Astro.url.searchParams.get('preview') === '1';
+const showSchedule = previewMode;
+const showSeating = previewMode;
 ---
 
 <Layout title="Tomáš & Emma – Wedding 2026" locale={locale}>
   <!-- Nav links slot -->
   <Fragment slot="nav-links">
     <li><a href="#venue"    class="hover:text-gold transition">{translations.nav.venue}</a></li>
-    <li><a href="#schedule" class="hover:text-gold transition">{translations.nav.schedule}</a></li>
-    <li><a href="#seating"  class="hover:text-gold transition">{translations.nav.seating}</a></li>
+    {showSchedule && <li><a href="#schedule" class="hover:text-gold transition">{translations.nav.schedule}</a></li>}
+    {showSeating && <li><a href="#seating"  class="hover:text-gold transition">{translations.nav.seating}</a></li>}
     <li><a href="#rsvp"     class="hover:text-gold transition">{translations.nav.rsvp}</a></li>
   </Fragment>
 
   <Hero t={translations} />
   <Venue t={translations} />
-  <Schedule t={translations} />
-  <Seating t={translations} />
+  {showSchedule && <Schedule t={translations} />}
+  {showSeating && <Seating t={translations} />}
   <Gift t={translations} />
   <Rsvp t={translations} />
 
