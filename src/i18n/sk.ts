@@ -27,17 +27,16 @@ export const sk: Translation = {
     parkingNote:  'Priamo pri Kulturame parkovanie nie je. V okolí sú dve platené parkoviská:',
     parkingLots: [
       {
-        name:     'Filiálka',
-        detail:   '1 € / h \xa0· \xa0max 7 € / deň \xa0· \xa0~5 min pešo',
-        navigate: 'https://maps.google.com/?q=Parkovisko+Filiálka,+Šancová,+Bratislava',
-        embed:    'https://maps.google.com/maps?q=Parkovisko+Filiálka,+Šancová,+Bratislava&output=embed',
-
+        name:     'URBAN PARKING — Račianska, Bratislava',
+        detail:   '2 € / h \xa0· \xa0max 24 € / deň \xa0· \xa0~1 min pešo',
+        navigate: 'https://www.google.com/maps/dir/?api=1&destination=URBAN+PARKING,+Ra%C4%8Dianska,+Bratislava&travelmode=driving',
+        embed:    'https://maps.google.com/maps?q=URBAN+PARKING,+Ra%C4%8Dianska,+Bratislava&output=embed',
       },
       {
-        name:     'URBAN Residences',
-        detail:   '2 € / h \xa0· \xa0max 24 € / deň \xa0· \xa0~1 min pešo',
-        navigate: 'https://maps.google.com/?q=URBAN+Residence+parking,+Račianska,+Bratislava',
-        embed:    'https://maps.google.com/maps?q=Račianska+78+Bratislava&output=embed',
+        name:     'Parcool Filiálka — Šancová, Bratislava',
+        detail:   '1 € / h \xa0· \xa0max 7 € / deň \xa0· \xa0~5 min pešo',
+        navigate: 'https://www.google.com/maps/dir/?api=1&destination=Parcool+Fili%C3%A1lka,+%C5%A0ancov%C3%A1,+Bratislava&travelmode=driving',
+        embed:    'https://maps.google.com/maps?q=Parcool+Fili%C3%A1lka,+%C5%A0ancov%C3%A1,+Bratislava&output=embed',
       },
     ],
     navigateLabel: 'Navigovať',

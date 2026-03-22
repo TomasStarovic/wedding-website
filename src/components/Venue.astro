@@ -64,17 +64,19 @@ const mapsLink =
             />
           </div>
           <!-- Card info -->
-          <div class="p-5 bg-white space-y-2">
+          <div class="p-6 bg-white space-y-2">
             <p class="font-serif text-xl text-charcoal">{lot.name}</p>
             <p class="text-charcoal/60 text-sm">{lot.detail}</p>
+            <div class="pt-3">
             <a
               href={lot.navigate}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-block mt-2 border border-sage text-sage font-sans text-xs tracking-widest uppercase px-5 py-2 rounded-full hover:bg-sage hover:text-white transition"
+                class="inline-block border border-gold text-gold font-sans text-sm tracking-widest uppercase px-5 py-2 rounded-full hover:bg-gold hover:text-white transition"
             >
               {t.venue.navigateLabel}
             </a>
+            </div>
           </div>
         </div>
       ))}
