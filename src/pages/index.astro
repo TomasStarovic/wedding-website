@@ -17,11 +17,6 @@ const showSeating = previewMode;
 
 <Layout title="Emma & Tomáš – Svadba 2026" locale={locale}>
   <!-- Nav links slot -->
-  <Fragment slot="nav-links">
-    <li><a href="#venue"    class="hover:text-gold transition">{translations.nav.venue}</a></li>
-    {showSchedule && <li><a href="#schedule" class="hover:text-gold transition">{translations.nav.schedule}</a></li>}
-    {showSeating && <li><a href="#seating"  class="hover:text-gold transition">{translations.nav.seating}</a></li>}
-  </Fragment>
 
   <Hero t={translations} />
   <Venue t={translations} />
