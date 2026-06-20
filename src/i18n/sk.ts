@@ -24,7 +24,7 @@ export const sk: Translation = {
     address:      'Kulturama — Račianska 22/A, Bratislava',
     directions:   'Navigovať na miesto',
     parkingTitle: 'Parkovanie',
-    parkingNote:  'Priamo pri Kulturame parkovanie nie je. V okolí sú dve platené parkoviská:',
+    parkingNote:  'Priamo pri Kulturame parkovanie nie je. Odporúčame prísť Uberom/Boltom alebo MHD (zastávka Račianske mýto). \n\n V okolí sú dve platené parkoviská:',
     parkingLots: [
       {
         name:     'URBAN PARKING — Račianska, Bratislava',

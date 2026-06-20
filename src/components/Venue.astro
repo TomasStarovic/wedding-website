@@ -45,8 +45,9 @@ const mapsLink =
   <!-- Parking -->
   <div class="mt-16">
     <h3 class="font-serif text-3xl text-charcoal text-center mb-2">{t.venue.parkingTitle}</h3>
-    <p class="text-center text-charcoal/60 text-sm mb-8">{t.venue.parkingNote}</p>
-
+    <p class="text-center text-charcoal/60 text-sm mb-8 whitespace-pre-line">
+      {t.venue.parkingNote}
+    </p>
     <div class="grid md:grid-cols-2 gap-8">
       {t.venue.parkingLots.map((lot) => (
         <div class="rounded-2xl overflow-hidden border border-blush/30 shadow-sm">

@@ -22,7 +22,7 @@ export const en = {
     address:      'Kulturama — Račianska 22/A, Bratislava',
     directions:   'Navigate to Venue',
     parkingTitle: 'Parking',
-    parkingNote:  'There is no parking at the venue itself. Two paid car parks are a short walk away:',
+    parkingNote:  'There is no parking at the venue itself. We recommend arriving by Uber/Bolt or public transport (Račianske mýto stop). \n\n Two paid car parks are a short walk away:',
     parkingLots: [
       {
         name:     'URBAN PARKING — Račianska, Bratislava',
